@@ -1,0 +1,74 @@
+[
+  {
+    "artista": "Daft Punk",
+    "genero": "Eletrônica",
+    "origem": "França",
+    "albumPrincipal": "Discovery",
+    "linkStreaming": "https://open.spotify.com/artist/4tZwfgrHOc3mvqYlEYSvVi",
+    "rating": "4.7",
+    "imagem": "https://via.placeholder.com/300?text=Sem+Imagem"
+  },
+  {
+    "artista": "Beyoncé",
+    "genero": "R&B",
+    "origem": "Estados Unidos",
+    "albumPrincipal": "Lemonade",
+    "linkStreaming": "https://open.spotify.com/artist/6vWDO969PvNqNYVdv6VJ9d",
+    "rating": "4.9",
+    "imagem": "https://via.placeholder.com/300?text=Sem+Imagem"
+  },
+  {
+    "artista": "The Beatles",
+    "genero": "Rock",
+    "origem": "Reino Unido",
+    "albumPrincipal": "Abbey Road",
+    "linkStreaming": "https://open.spotify.com/artist/3WrFJ7ztbogyGnTHbHJFl2",
+    "rating": "4.6",
+    "imagem": "https://via.placeholder.com/300?text=Sem+Imagem"
+  },
+  {
+    "artista": "Billie Eilish",
+    "genero": "Pop",
+    "origem": "Estados Unidos",
+    "albumPrincipal": "When We All Fall Asleep, Where Do We Go?",
+    "linkStreaming": "https://open.spotify.com/artist/6qqNVTkY8uBg9cP3Jd7DAH",
+    "rating": "4.7",
+    "imagem": "https://via.placeholder.com/300?text=Sem+Imagem"
+  },
+  {
+    "artista": "Chico Buarque",
+    "genero": "MPB",
+    "origem": "Brasil",
+    "albumPrincipal": "Construção",
+    "linkStreaming": "https://open.spotify.com/artist/4c2W2znMCn5P3k5fuvI1Jw",
+    "rating": "5.0",
+    "imagem": "https://via.placeholder.com/300?text=Sem+Imagem"
+  },
+  {
+    "artista": "Miles Davis",
+    "genero": "Jazz",
+    "origem": "Estados Unidos",
+    "albumPrincipal": "Kind of Blue",
+    "linkStreaming": "https://open.spotify.com/artist/0kbY6mX3f8OaHn1Ft3u5hJ",
+    "rating": "4.5",
+    "imagem": "https://via.placeholder.com/300?text=Sem+Imagem"
+  },
+  {
+    "artista": "Anitta",
+    "genero": "Pop",
+    "origem": "Brasil",
+    "albumPrincipal": "Kisses",
+    "linkStreaming": "https://open.spotify.com/artist/7FNnA9vBm6EKce9Gxyh898",
+    "rating": "5.0",
+    "imagem": "https://via.placeholder.com/300?text=Sem+Imagem"
+  },
+  {
+    "artista": "Queen",
+    "genero": "Rock",
+    "origem": "Reino Unido",
+    "albumPrincipal": "A Night at the Opera",
+    "linkStreaming": "https://open.spotify.com/artist/1dfeR4oJnrC0nK7f9az4bU",
+    "rating": "4.9",
+    "imagem": "https://via.placeholder.com/300?text=Sem+Imagem"
+  }
+]
