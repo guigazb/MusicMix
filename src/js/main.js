@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                     <input id="search-input"
                            class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-gray-800 dark:text-white focus:outline-0 focus:ring-0 border-none bg-black/5 dark:bg-white/10 h-full placeholder:text-gray-500 dark:placeholder:text-gray-400 px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal"
-                           placeholder="Search artists..." />
+                           placeholder="Procure Artistas..." />
                   </div>
                 </label>
 
@@ -51,11 +51,11 @@ document.addEventListener('DOMContentLoaded', () => {
                        style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuCga_4NuOpd9sElseibb2IsR3dgsndAczCiuEE3ViIyu1C2FyUA9qPJB6ailaf6JTdUgQjm2UF3es_en6Bu3ZqfPxyV9PZviRjd8Z5hlxhs83WB7rX9CFhtT34NRhWHYHvMVJEDozIQWYbltLiHDYk_2SdGlqa3L5wyAIyMn2qJ5quRcpFarow35dwqHlJjWitn9GUxLKNld1l3VwEu7Jljhj8XwXKEtxFRBDbQbxj-ZxuNSuNR-l66cu-qiE7uVM14kwLF7Ak0wTUi')"></div>
                   <div class="flex flex-col gap-6 @[480px]:min-w-[400px] @[480px]:gap-8 @[864px]:justify-center">
                     <div class="flex flex-col gap-2 text-left">
-                      <h1 class="text-gray-900 dark:text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl">Discover Your Next Favorite Artist</h1>
-                      <h2 class="text-gray-600 dark:text-gray-300 text-sm font-normal leading-normal @[480px]:text-base">Explore our curated catalog of diverse and talented artists from around the world.</h2>
+                      <h1 class="text-gray-900 dark:text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl">Descubra seu novo Artista Favorito</h1>
+                      <h2 class="text-gray-600 dark:text-gray-300 text-sm font-normal leading-normal @[480px]:text-base">Explore nosso catálogo selecionado de artistas diversos e talentosos de todo o mundo.</h2>
                     </div>
                     <button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-opacity-90 transition-colors">
-                      <span class="truncate">Explore Artists</span>
+                      <span class="truncate">Descubra artistas</span>
                     </button>
                   </div>
                 </div>
@@ -66,36 +66,67 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
                   <div class="flex flex-col md:flex-row gap-4 flex-wrap flex-1">
                     <div class="flex-grow">
-                      <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" for="genre-filter">Filter by Genre</label>
-                      <select id="genre-filter" class="w-full rounded-lg border-none bg-black/5 dark:bg-white/10 text-gray-800 dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary h-10 px-3">
-                        <option>All Genres</option>
+                      <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" for="genre-filter">Filtro por Gênero</label>
+                      <select id="genre-filter" class="w-full rounded-lg border-none bg-black/5 dark:bg-white/30 text-gray-800 dark:text-black focus:outline-0 focus:ring-2 focus:ring-primary h-10 px-3">
+                        <option>Todos gêneros</option>
                         <option>Pop</option>
                         <option>Rock</option>
                         <option>Jazz</option>
-                        <option>Electronic</option>
-                        <option>R&amp;B</option>
-                        <option>Classical</option>
-                        <option>Hip-hop</option>
+                        <option>Chanson</option>
+                        <option>Eletrônica</option>
+                        <option>R&B</option>
+                        <option>MPB</option>
+                        <option>Axé</option>
+                        <option>Bossa Nova</option>
+                        <option>Metal</option>
+                        <option>Punk</option>
+                        <option>Schlager</option>
+                        <option>Ranchera</option>
+                        <option>Balada</option>
+                        <option>Tejano</option>
+                        <option>Afrobeat</option>
+                        <option>K-Pop</option>
+                        <option>Mandopop</option>
+                        <option>Cantopop</option>
+                        <option>Filme</option>
+                        <option>Playback</option>
+                        <option>Clássico</option>
+                        <option>J-Pop</option>
+                        <option>Pop-Punk</option>
+                        <option>Alternative Rock</option>
+                        <option>Synthpop</option>
+                        <option>Psicodélico</option>
+                        <option>Indie Pop</option>
+                        <option>Flamenco Pop</option>
+                        <option>Ópera Pop</option>
+                        <option>Folk Rock</option>
+                        <option>Trap</option>
+                        <option>Folk</option>
+                        <option>Afro-Jazz</option>
+                        <option>Hip-Hop</option>
+                        <option>Hardcore Hip-Hop</option>
                         <option>Country</option>
+                        <option>House</option>
+                        <option>Vallenato</option>
                       </select>
                     </div>
                     <div class="flex-grow min-w-[200px]">
-                      <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" for="rating-slider">Minimum Rating</label>
+                      <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" for="rating-slider">Avaliação Mínima</label>
                       <input id="rating-slider" class="w-full h-2 bg-black/10 rounded-lg appearance-none cursor-pointer dark:bg-white/10 accent-primary" type="range" min="0" max="5" step="0.5" value="0" />
                     </div>
                   </div>
                   <div class="flex-shrink-0">
-                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" for="sort-by">Sort by</label>
-                    <select id="sort-by" class="w-full md:w-auto rounded-lg border-none bg-black/5 dark:bg-white/10 text-gray-800 dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary h-10 px-3">
-                      <option>Featured</option>
-                      <option>Rating (High to Low)</option>
-                      <option>Rating (Low to High)</option>
+                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" for="sort-by">Ordene por</label>
+                    <select id="sort-by" class="w-full md:w-auto rounded-lg border-none bg-black/5 dark:bg-white/30 text-gray-800 dark:text-black focus:outline-0 focus:ring-2 focus:ring-primary h-10 px-3">
+                      <option>Destaques</option>
+                      <option>Avaliação (Alta para Baixa)</option>
+                      <option>Avaliação (Baixa para Alta)</option>
                     </select>
                   </div>
                 </div>
               </div>
 
-              <h2 class="text-gray-900 dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Featured Artists</h2>
+              <h2 class="text-gray-900 dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Destaques</h2>
 
               <div id="artists-grid" class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-4 p-4"></div>
             </main>
@@ -103,9 +134,9 @@ document.addEventListener('DOMContentLoaded', () => {
             <!-- Footer -->
             <footer class="flex flex-col gap-6 px-5 py-10 text-center @container border-t border-solid border-black/10 dark:border-white/10 mt-10">
               <div class="flex flex-wrap items-center justify-center gap-6 @[480px]:flex-row @[480px]:justify-around">
-                <a href="#" class="text-gray-600 dark:text-gray-400 text-base font-normal leading-normal min-w-40 hover:text-primary transition-colors">About</a>
-                <a href="#" class="text-gray-600 dark:text-gray-400 text-base font-normal leading-normal min-w-40 hover:text-primary transition-colors">Contact</a>
-                <a href="#" class="text-gray-600 dark:text-gray-400 text-base font-normal leading-normal min-w-40 hover:text-primary transition-colors">Terms of Service</a>
+                <a href="#" class="text-gray-600 dark:text-gray-400 text-base font-normal leading-normal min-w-40 hover:text-primary transition-colors">Sobre Nós</a>
+                <a href="#" class="text-gray-600 dark:text-gray-400 text-base font-normal leading-normal min-w-40 hover:text-primary transition-colors">Contato</a>
+                <a href="#" class="text-gray-600 dark:text-gray-400 text-base font-normal leading-normal min-w-40 hover:text-primary transition-colors">Termos de Serviço</a>
               </div>
               <div class="flex flex-wrap justify-center gap-4">
                 <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-primary transition-colors"><span class="material-symbols-outlined">alternate_email</span></a>
@@ -164,15 +195,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const query = searchInput.value.toLowerCase().trim();
 
     let list = artists.filter(a => {
-      const byName = a.name.toLowerCase().includes(query);
-      const byGenre = genreFilter.value === 'All Genres' || a.genre === genreFilter.value;
+      const byName = a.artista.toLowerCase().includes(query);
+      const byGenre = genreFilter.value === 'Todos gêneros' || a.genero === genreFilter.value;
       const byRating = a.rating >= Number(ratingSlider.value);
       return byName && byGenre && byRating;
     });
 
     // Ordenação
-    if (sortBy.value === 'Rating (High to Low)') list.sort((a, b) => b.rating - a.rating);
-    else if (sortBy.value === 'Rating (Low to High)') list.sort((a, b) => a.rating - b.rating);
+    if (sortBy.value === 'Avaliação (Alta para Baixa)') list.sort((a, b) => b.rating - a.rating);
+    else if (sortBy.value === 'Avaliação (Baixa para Alta)') list.sort((a, b) => a.rating - b.rating);
 
     grid.innerHTML = list.length
       ? list.map(renderArtistCard).join('')

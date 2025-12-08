@@ -4,11 +4,7 @@ export const artists = artistsData;
 
 export function renderArtistCard(artist) {
   return `
-    <div class="flex flex-col gap-3 pb-3 group cursor-pointer" onclick="window.open('${artist.linkStreaming}', '_blank')">
-      <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg overflow-hidden">
-        <div class="w-full h-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
-             style="background-image:url('${artist.imagem}')"></div>
-      </div>
+    <div class="flex flex-col gap-3 pb-3 group cursor-pointer">
       <div>
         <div class="flex justify-between items-center">
           <p class="text-gray-900 dark:text-white text-base font-medium leading-normal">${artist.artista}</p>

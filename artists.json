@@ -4,71 +4,1266 @@
     "genero": "Eletrônica",
     "origem": "França",
     "albumPrincipal": "Discovery",
-    "linkStreaming": "https://open.spotify.com/artist/4tZwfgrHOc3mvqYlEYSvVi",
-    "rating": "4.7",
-    "imagem": "https://via.placeholder.com/300?text=Sem+Imagem"
+    "rating": "4.7"
+  },
+  {
+    "artista": "Justice",
+    "genero": "Eletrônica",
+    "origem": "França",
+    "albumPrincipal": "Cross",
+    "rating": "4.6"
+  },
+  {
+    "artista": "Stromae",
+    "genero": "Eletrônica",
+    "origem": "França",
+    "albumPrincipal": "Racine Carrée",
+    "rating": "4.8"
+  },
+  {
+    "artista": "David Guetta",
+    "genero": "Eletrônica",
+    "origem": "França",
+    "albumPrincipal": "Nothing but the Beat",
+    "rating": "4.5"
+  },
+  {
+    "artista": "Indila",
+    "genero": "Pop",
+    "origem": "França",
+    "albumPrincipal": "Mini World",
+    "rating": "4.7"
+  },
+  {
+    "artista": "Mylène Farmer",
+    "genero": "Pop",
+    "origem": "França",
+    "albumPrincipal": "Anamorphosée",
+    "rating": "4.9"
+  },
+  {
+    "artista": "Serge Gainsbourg",
+    "genero": "Chanson",
+    "origem": "França",
+    "albumPrincipal": "Histoire de Melody Nelson",
+    "rating": "4.8"
+  },
+  {
+    "artista": "Édith Piaf",
+    "genero": "Chanson",
+    "origem": "França",
+    "albumPrincipal": "La Vie en Rose",
+    "rating": "5.0"
+  },
+  {
+    "artista": "Johnny Hallyday",
+    "genero": "Rock",
+    "origem": "França",
+    "albumPrincipal": "Salut les Copains",
+    "rating": "4.6"
+  },
+  {
+    "artista": "Charles Aznavour",
+    "genero": "Chanson",
+    "origem": "França",
+    "albumPrincipal": "La Bohème",
+    "rating": "4.9"
+  },
+  {
+    "artista": "Taylor Swift",
+    "genero": "Pop",
+    "origem": "Estados Unidos",
+    "albumPrincipal": "1989",
+    "rating": "4.8"
   },
   {
     "artista": "Beyoncé",
     "genero": "R&B",
     "origem": "Estados Unidos",
     "albumPrincipal": "Lemonade",
-    "linkStreaming": "https://open.spotify.com/artist/6vWDO969PvNqNYVdv6VJ9d",
-    "rating": "4.9",
-    "imagem": "https://via.placeholder.com/300?text=Sem+Imagem"
+    "rating": "4.9"
   },
   {
-    "artista": "The Beatles",
-    "genero": "Rock",
-    "origem": "Reino Unido",
-    "albumPrincipal": "Abbey Road",
-    "linkStreaming": "https://open.spotify.com/artist/3WrFJ7ztbogyGnTHbHJFl2",
-    "rating": "4.6",
-    "imagem": "https://via.placeholder.com/300?text=Sem+Imagem"
+    "artista": "Drake",
+    "genero": "Hip-Hop",
+    "origem": "Estados Unidos",
+    "albumPrincipal": "Take Care",
+    "rating": "4.7"
+  },
+  {
+    "artista": "Post Malone",
+    "genero": "Hip-Hop",
+    "origem": "Estados Unidos",
+    "albumPrincipal": "Hollywood's Bleeding",
+    "rating": "4.6"
   },
   {
     "artista": "Billie Eilish",
     "genero": "Pop",
     "origem": "Estados Unidos",
     "albumPrincipal": "When We All Fall Asleep, Where Do We Go?",
-    "linkStreaming": "https://open.spotify.com/artist/6qqNVTkY8uBg9cP3Jd7DAH",
-    "rating": "4.7",
-    "imagem": "https://via.placeholder.com/300?text=Sem+Imagem"
+    "rating": "4.7"
   },
   {
-    "artista": "Chico Buarque",
-    "genero": "MPB",
-    "origem": "Brasil",
-    "albumPrincipal": "Construção",
-    "linkStreaming": "https://open.spotify.com/artist/4c2W2znMCn5P3k5fuvI1Jw",
-    "rating": "5.0",
-    "imagem": "https://via.placeholder.com/300?text=Sem+Imagem"
-  },
-  {
-    "artista": "Miles Davis",
-    "genero": "Jazz",
+    "artista": "The Weeknd",
+    "genero": "R&B",
     "origem": "Estados Unidos",
-    "albumPrincipal": "Kind of Blue",
-    "linkStreaming": "https://open.spotify.com/artist/0kbY6mX3f8OaHn1Ft3u5hJ",
-    "rating": "4.5",
-    "imagem": "https://via.placeholder.com/300?text=Sem+Imagem"
+    "albumPrincipal": "Dawn FM",
+    "rating": "4.8"
   },
   {
-    "artista": "Anitta",
+    "artista": "Ariana Grande",
     "genero": "Pop",
-    "origem": "Brasil",
-    "albumPrincipal": "Kisses",
-    "linkStreaming": "https://open.spotify.com/artist/7FNnA9vBm6EKce9Gxyh898",
-    "rating": "5.0",
-    "imagem": "https://via.placeholder.com/300?text=Sem+Imagem"
+    "origem": "Estados Unidos",
+    "albumPrincipal": "Thank U, Next",
+    "rating": "4.7"
+  },
+  {
+    "artista": "Elton John",
+    "genero": "Pop",
+    "origem": "Estados Unidos",
+    "albumPrincipal": "Goodbye Yellow Brick Road",
+    "rating": "4.9"
+  },
+  {
+    "artista": "Lady Gaga",
+    "genero": "Pop",
+    "origem": "Estados Unidos",
+    "albumPrincipal": "Chromatica",
+    "rating": "4.6"
+  },
+  {
+    "artista": "Kendrick Lamar",
+    "genero": "Hip-Hop",
+    "origem": "Estados Unidos",
+    "albumPrincipal": "DAMN.",
+    "rating": "4.8"
+  },
+  {
+    "artista": "The Beatles",
+    "genero": "Rock",
+    "origem": "Reino Unido",
+    "albumPrincipal": "Abbey Road",
+    "rating": "4.9"
   },
   {
     "artista": "Queen",
     "genero": "Rock",
     "origem": "Reino Unido",
     "albumPrincipal": "A Night at the Opera",
-    "linkStreaming": "https://open.spotify.com/artist/1dfeR4oJnrC0nK7f9az4bU",
-    "rating": "4.9",
-    "imagem": "https://via.placeholder.com/300?text=Sem+Imagem"
+    "rating": "4.9"
+  },
+  {
+    "artista": "David Bowie",
+    "genero": "Rock",
+    "origem": "Reino Unido",
+    "albumPrincipal": "The Rise and Fall of Ziggy Stardust",
+    "rating": "4.8"
+  },
+  {
+    "artista": "Elton John",
+    "genero": "Pop",
+    "origem": "Reino Unido",
+    "albumPrincipal": "Goodbye Yellow Brick Road",
+    "rating": "4.9"
+  },
+  {
+    "artista": "Adele",
+    "genero": "Pop",
+    "origem": "Reino Unido",
+    "albumPrincipal": "21",
+    "rating": "4.9"
+  },
+  {
+    "artista": "Ed Sheeran",
+    "genero": "Pop",
+    "origem": "Reino Unido",
+    "albumPrincipal": "+",
+    "rating": "4.7"
+  },
+  {
+    "artista": "Harry Styles",
+    "genero": "Pop",
+    "origem": "Reino Unido",
+    "albumPrincipal": "Harry's House",
+    "rating": "4.7"
+  },
+  {
+    "artista": "Led Zeppelin",
+    "genero": "Rock",
+    "origem": "Reino Unido",
+    "albumPrincipal": "IV",
+    "rating": "4.8"
+  },
+  {
+    "artista": "Pink Floyd",
+    "genero": "Rock",
+    "origem": "Reino Unido",
+    "albumPrincipal": "The Dark Side of the Moon",
+    "rating": "4.9"
+  },
+  {
+    "artista": "Coldplay",
+    "genero": "Rock",
+    "origem": "Reino Unido",
+    "albumPrincipal": "A Rush of Blood to the Head",
+    "rating": "4.6"
+  },
+  {
+    "artista": "Anitta",
+    "genero": "Pop",
+    "origem": "Brasil",
+    "albumPrincipal": "Versions of Me",
+    "rating": "4.8"
+  },
+  {
+    "artista": "Marisa Monte",
+    "genero": "MPB",
+    "origem": "Brasil",
+    "albumPrincipal": "Universo ao Meu Redor",
+    "rating": "4.7"
+  },
+  {
+    "artista": "Caetano Veloso",
+    "genero": "MPB",
+    "origem": "Brasil",
+    "albumPrincipal": "Transa",
+    "rating": "4.9"
+  },
+  {
+    "artista": "Chico Buarque",
+    "genero": "MPB",
+    "origem": "Brasil",
+    "albumPrincipal": "Construção",
+    "rating": "5.0"
+  },
+  {
+    "artista": "Roberto Carlos",
+    "genero": "Pop",
+    "origem": "Brasil",
+    "albumPrincipal": "Emoções",
+    "rating": "4.8"
+  },
+  {
+    "artista": "Ivete Sangalo",
+    "genero": "Axé",
+    "origem": "Brasil",
+    "albumPrincipal": "O Canto da Cidade",
+    "rating": "4.7"
+  },
+  {
+    "artista": "Gilberto Gil",
+    "genero": "MPB",
+    "origem": "Brasil",
+    "albumPrincipal": "Expresso 2222",
+    "rating": "4.8"
+  },
+  {
+    "artista": "Maria Bethânia",
+    "genero": "MPB",
+    "origem": "Brasil",
+    "albumPrincipal": "Drama",
+    "rating": "4.9"
+  },
+  {
+    "artista": "João Gilberto",
+    "genero": "Bossa Nova",
+    "origem": "Brasil",
+    "albumPrincipal": "Chega de Saudade",
+    "rating": "4.9"
+  },
+  {
+    "artista": "Rammstein",
+    "genero": "Metal",
+    "origem": "Alemanha",
+    "albumPrincipal": "Mutter",
+    "rating": "4.7"
+  },
+  {
+    "artista": "Scorpions",
+    "genero": "Rock",
+    "origem": "Alemanha",
+    "albumPrincipal": "Blackout",
+    "rating": "4.6"
+  },
+  {
+    "artista": "Herbert Grönemeyer",
+    "genero": "Pop",
+    "origem": "Alemanha",
+    "albumPrincipal": "4630 Bochum",
+    "rating": "4.8"
+  },
+  {
+    "artista": "Rammstein",
+    "genero": "Metal",
+    "origem": "Alemanha",
+    "albumPrincipal": "Mutter",
+    "rating": "4.7"
+  },
+  {
+    "artista": "Nina Hagen",
+    "genero": "Punk",
+    "origem": "Alemanha",
+    "albumPrincipal": "Nina Hagen Band",
+    "rating": "4.6"
+  },
+  {
+    "artista": "Helene Fischer",
+    "genero": "Schlager",
+    "origem": "Alemanha",
+    "albumPrincipal": "Farbfieber",
+    "rating": "4.7"
+  },
+  {
+    "artista": "Toto Cutugno",
+    "genero": "Pop",
+    "origem": "Alemanha",
+    "albumPrincipal": "L'Italiano",
+    "rating": "4.8"
+  },
+  {
+    "artista": "Kraftwerk",
+    "genero": "Eletrônica",
+    "origem": "Alemanha",
+    "albumPrincipal": "Autobahn",
+    "rating": "4.9"
+  },
+  {
+    "artista": "Nena",
+    "genero": "Pop",
+    "origem": "Alemanha",
+    "albumPrincipal": "Nena",
+    "rating": "4.6"
+  },
+  {
+    "artista": "Juan Gabriel",
+    "genero": "Pop",
+    "origem": "México",
+    "albumPrincipal": "Recuerdos",
+    "rating": "4.9"
+  },
+  {
+    "artista": "Vicente Fernández",
+    "genero": "Ranchera",
+    "origem": "México",
+    "albumPrincipal": "El Ídolo de México",
+    "rating": "4.8"
+  },
+  {
+    "artista": "Alejandro Fernández",
+    "genero": "Ranchera",
+    "origem": "México",
+    "albumPrincipal": "Me Dediqué a Perderte",
+    "rating": "4.7"
+  },
+  {
+    "artista": "Thalía",
+    "genero": "Pop",
+    "origem": "México",
+    "albumPrincipal": "Amor a la Mexicana",
+    "rating": "4.6"
+  },
+  {
+    "artista": "Luis Miguel",
+    "genero": "Pop",
+    "origem": "México",
+    "albumPrincipal": "Romance",
+    "rating": "4.8"
+  },
+  {
+    "artista": "Gloria Trevi",
+    "genero": "Pop",
+    "origem": "México",
+    "albumPrincipal": "Qué Hago Aquí?",
+    "rating": "4.7"
+  },
+  {
+    "artista": "José José",
+    "genero": "Balada",
+    "origem": "México",
+    "albumPrincipal": "Secretos",
+    "rating": "4.9"
+  },
+  {
+    "artista": "Maná",
+    "genero": "Rock",
+    "origem": "México",
+    "albumPrincipal": "Dónde Jugarán los Niños?",
+    "rating": "4.8"
+  },
+  {
+    "artista": "Selena",
+    "genero": "Tejano",
+    "origem": "México",
+    "albumPrincipal": "Amor Prohibido",
+    "rating": "4.9"
+  },
+  {
+    "artista": "Burna Boy",
+    "genero": "Afrobeat",
+    "origem": "Nigéria",
+    "albumPrincipal": "African Giant",
+    "rating": "4.8"
+  },
+  {
+    "artista": "Wizkid",
+    "genero": "Afrobeat",
+    "origem": "Nigéria",
+    "albumPrincipal": "Made in Lagos",
+    "rating": "4.7"
+  },
+  {
+    "artista": "Davido",
+    "genero": "Afrobeat",
+    "origem": "Nigéria",
+    "albumPrincipal": "Timeless",
+    "rating": "4.7"
+  },
+  {
+    "artista": "Tiwa Savage",
+    "genero": "Afrobeat",
+    "origem": "Nigéria",
+    "albumPrincipal": "Celia",
+    "rating": "4.6"
+  },
+  {
+    "artista": "Olamide",
+    "genero": "Hip-Hop",
+    "origem": "Nigéria",
+    "albumPrincipal": "UY Scuti",
+    "rating": "4.6"
+  },
+  {
+    "artista": "Reminisce",
+    "genero": "Hip-Hop",
+    "origem": "Nigéria",
+    "albumPrincipal": "El Hadj",
+    "rating": "4.5"
+  },
+  {
+    "artista": "2Baba",
+    "genero": "Afrobeat",
+    "origem": "Nigéria",
+    "albumPrincipal": "Face2Face",
+    "rating": "4.7"
+  },
+  {
+    "artista": "Peter Okoye",
+    "genero": "Afrobeat",
+    "origem": "Nigéria",
+    "albumPrincipal": "The Genes",
+    "rating": "4.5"
+  },
+  {
+    "artista": "Flavour",
+    "genero": "Afrobeat",
+    "origem": "Nigéria",
+    "albumPrincipal": "Blessed",
+    "rating": "4.6"
+  },
+  {
+    "artista": "BTS",
+    "genero": "K-Pop",
+    "origem": "Coreia do Sul",
+    "albumPrincipal": "Map of the Soul: 7",
+    "rating": "4.9"
+  },
+  {
+    "artista": "BLACKPINK",
+    "genero": "K-Pop",
+    "origem": "Coreia do Sul",
+    "albumPrincipal": "The Album",
+    "rating": "4.8"
+  },
+  {
+    "artista": "IU",
+    "genero": "K-Pop",
+    "origem": "Coreia do Sul",
+    "albumPrincipal": "Palette",
+    "rating": "4.8"
+  },
+  {
+    "artista": "EXO",
+    "genero": "K-Pop",
+    "origem": "Coreia do Sul",
+    "albumPrincipal": "EX'ACT",
+    "rating": "4.7"
+  },
+  {
+    "artista": "TWICE",
+    "genero": "K-Pop",
+    "origem": "Coreia do Sul",
+    "albumPrincipal": "Formula of Love",
+    "rating": "4.7"
+  },
+  {
+    "artista": "SEVENTEEN",
+    "genero": "K-Pop",
+    "origem": "Coreia do Sul",
+    "albumPrincipal": "FML",
+    "rating": "4.8"
+  },
+  {
+    "artista": "Stray Kids",
+    "genero": "K-Pop",
+    "origem": "Coreia do Sul",
+    "albumPrincipal": "5-Star",
+    "rating": "4.7"
+  },
+  {
+    "artista": "aespa",
+    "genero": "K-Pop",
+    "origem": "Coreia do Sul",
+    "albumPrincipal": "My World",
+    "rating": "4.6"
+  },
+  {
+    "artista": "NewJeans",
+    "genero": "K-Pop",
+    "origem": "Coreia do Sul",
+    "albumPrincipal": "Get Up",
+    "rating": "4.7"
+  },
+  {
+    "artista": "Jay Chou",
+    "genero": "Mandopop",
+    "origem": "Índia",
+    "albumPrincipal": "Still Fantasy",
+    "rating": "4.8"
+  },
+  {
+    "artista": "A.R. Rahman",
+    "genero": "Filme",
+    "origem": "Índia",
+    "albumPrincipal": "Slumdog Millionaire",
+    "rating": "4.9"
+  },
+  {
+    "artista": "Arijit Singh",
+    "genero": "Playback",
+    "origem": "Índia",
+    "albumPrincipal": "Tum Hi Ho",
+    "rating": "4.8"
+  },
+  {
+    "artista": "Lata Mangeshkar",
+    "genero": "Playback",
+    "origem": "Índia",
+    "albumPrincipal": "Aye Mere Watan Ke Logon",
+    "rating": "5.0"
+  },
+  {
+    "artista": "Kishore Kumar",
+    "genero": "Playback",
+    "origem": "Índia",
+    "albumPrincipal": "Roop Tera Mastana",
+    "rating": "4.9"
+  },
+  {
+    "artista": "Sonu Nigam",
+    "genero": "Playback",
+    "origem": "Índia",
+    "albumPrincipal": "Kal Ho Naa Ho",
+    "rating": "4.7"
+  },
+  {
+    "artista": "Shreya Ghoshal",
+    "genero": "Playback",
+    "origem": "Índia",
+    "albumPrincipal": "Teri Meri",
+    "rating": "4.8"
+  },
+  {
+    "artista": "Asha Bhosle",
+    "genero": "Playback",
+    "origem": "Índia",
+    "albumPrincipal": "Piya Tu Ab To Aaja",
+    "rating": "4.9"
+  },
+  {
+    "artista": "Zakir Hussain",
+    "genero": "Clássico",
+    "origem": "Índia",
+    "albumPrincipal": "Tabla Duet",
+    "rating": "4.8"
+  },
+  {
+    "artista": "Yoasobi",
+    "genero": "J-Pop",
+    "origem": "Japão",
+    "albumPrincipal": "E-Side",
+    "rating": "4.7"
+  },
+  {
+    "artista": "Hikaru Utada",
+    "genero": "J-Pop",
+    "origem": "Japão",
+    "albumPrincipal": "First Love",
+    "rating": "4.9"
+  },
+  {
+    "artista": "LiSA",
+    "genero": "J-Rock",
+    "origem": "Japão",
+    "albumPrincipal": "Letters to U",
+    "rating": "4.7"
+  },
+  {
+    "artista": "Ado",
+    "genero": "J-Pop",
+    "origem": "Japão",
+    "albumPrincipal": "New Genesis",
+    "rating": "4.6"
+  },
+  {
+    "artista": "Vaundy",
+    "genero": "J-Pop",
+    "origem": "Japão",
+    "albumPrincipal": "Stereotype",
+    "rating": "4.7"
+  },
+  {
+    "artista": "Fujii Kaze",
+    "genero": "J-Pop",
+    "origem": "Japão",
+    "albumPrincipal": "Love All Serve All",
+    "rating": "4.8"
+  },
+  {
+    "artista": "Official Hige Dandism",
+    "genero": "J-Pop",
+    "origem": "Japão",
+    "albumPrincipal": "Editorial",
+    "rating": "4.7"
+  },
+  {
+    "artista": "Aimyon",
+    "genero": "J-Pop",
+    "origem": "Japão",
+    "albumPrincipal": "Mokkei",
+    "rating": "4.6"
+  },
+  {
+    "artista": "YOASOBI",
+    "genero": "J-Pop",
+    "origem": "Japão",
+    "albumPrincipal": "E-Side",
+    "rating": "4.7"
+  },
+  {
+    "artista": "Drake",
+    "genero": "Hip-Hop",
+    "origem": "Canadá",
+    "albumPrincipal": "Views",
+    "rating": "4.7"
+  },
+  {
+    "artista": "The Weeknd",
+    "genero": "R&B",
+    "origem": "Canadá",
+    "albumPrincipal": "Dawn FM",
+    "rating": "4.8"
+  },
+  {
+    "artista": "Justin Bieber",
+    "genero": "Pop",
+    "origem": "Canadá",
+    "albumPrincipal": "Purpose",
+    "rating": "4.6"
+  },
+  {
+    "artista": "Shawn Mendes",
+    "genero": "Pop",
+    "origem": "Canadá",
+    "albumPrincipal": "Wonder",
+    "rating": "4.5"
+  },
+  {
+    "artista": "Avril Lavigne",
+    "genero": "Pop-Punk",
+    "origem": "Canadá",
+    "albumPrincipal": "Let Go",
+    "rating": "4.7"
+  },
+  {
+    "artista": "Bryan Adams",
+    "genero": "Rock",
+    "origem": "Canadá",
+    "albumPrincipal": "Reckless",
+    "rating": "4.6"
+  },
+  {
+    "artista": "Celine Dion",
+    "genero": "Pop",
+    "origem": "Canadá",
+    "albumPrincipal": "Falling into You",
+    "rating": "4.9"
+  },
+  {
+    "artista": "Alanis Morissette",
+    "genero": "Alternative Rock",
+    "origem": "Canadá",
+    "albumPrincipal": "Jagged Little Pill",
+    "rating": "4.8"
+  },
+  {
+    "artista": "Neil Young",
+    "genero": "Rock",
+    "origem": "Canadá",
+    "albumPrincipal": "Harvest",
+    "rating": "4.9"
+  },
+  {
+    "artista": "AC/DC",
+    "genero": "Rock",
+    "origem": "Austrália",
+    "albumPrincipal": "Back in Black",
+    "rating": "4.9"
+  },
+  {
+    "artista": "Kylie Minogue",
+    "genero": "Pop",
+    "origem": "Austrália",
+    "albumPrincipal": "Fever",
+    "rating": "4.7"
+  },
+  {
+    "artista": "Tame Impala",
+    "genero": "Psicodélico",
+    "origem": "Austrália",
+    "albumPrincipal": "Currents",
+    "rating": "4.8"
+  },
+  {
+    "artista": "Sia",
+    "genero": "Pop",
+    "origem": "Austrália",
+    "albumPrincipal": "This Is Acting",
+    "rating": "4.6"
+  },
+  {
+    "artista": "INXS",
+    "genero": "Rock",
+    "origem": "Austrália",
+    "albumPrincipal": "Kick",
+    "rating": "4.7"
+  },
+  {
+    "artista": "Midnight Oil",
+    "genero": "Rock",
+    "origem": "Austrália",
+    "albumPrincipal": "Diesel and Dust",
+    "rating": "4.7"
+  },
+  {
+    "artista": "Tones and I",
+    "genero": "Pop",
+    "origem": "Austrália",
+    "albumPrincipal": "Dance Monkey",
+    "rating": "4.6"
+  },
+  {
+    "artista": "Gotye",
+    "genero": "Indie Pop",
+    "origem": "Austrália",
+    "albumPrincipal": "Making Mirrors",
+    "rating": "4.7"
+  },
+  {
+    "artista": "Flume",
+    "genero": "Eletrônica",
+    "origem": "Austrália",
+    "albumPrincipal": "Skin",
+    "rating": "4.8"
+  },
+  {
+    "artista": "Julio Iglesias",
+    "genero": "Balada",
+    "origem": "Espanha",
+    "albumPrincipal": "1100 Bel Air Place",
+    "rating": "4.8"
+  },
+  {
+    "artista": "Rosalía",
+    "genero": "Flamenco Pop",
+    "origem": "Espanha",
+    "albumPrincipal": "El Mal Querer",
+    "rating": "4.8"
+  },
+  {
+    "artista": "Enrique Iglesias",
+    "genero": "Pop",
+    "origem": "Espanha",
+    "albumPrincipal": "Euphoria",
+    "rating": "4.6"
+  },
+  {
+    "artista": "Alejandro Sanz",
+    "genero": "Pop",
+    "origem": "Espanha",
+    "albumPrincipal": "Más",
+    "rating": "4.7"
+  },
+  {
+    "artista": "David Bisbal",
+    "genero": "Pop",
+    "origem": "Espanha",
+    "albumPrincipal": "Bulería",
+    "rating": "4.6"
+  },
+  {
+    "artista": "Antonio Orozco",
+    "genero": "Pop",
+    "origem": "Espanha",
+    "albumPrincipal": "Cadore",
+    "rating": "4.7"
+  },
+  {
+    "artista": "Pablo Alborán",
+    "genero": "Pop",
+    "origem": "Espanha",
+    "albumPrincipal": "Prometo",
+    "rating": "4.7"
+  },
+  {
+    "artista": "Malú",
+    "genero": "Pop",
+    "origem": "Espanha",
+    "albumPrincipal": "Gracias",
+    "rating": "4.6"
+  },
+  {
+    "artista": "Lola Índigo",
+    "genero": "Pop",
+    "origem": "Espanha",
+    "albumPrincipal": "AKI",
+    "rating": "4.5"
+  },
+  {
+    "artista": "Andrea Bocelli",
+    "genero": "Ópera Pop",
+    "origem": "Itália",
+    "albumPrincipal": "Romanza",
+    "rating": "4.9"
+  },
+  {
+    "artista": "Laura Pausini",
+    "genero": "Pop",
+    "origem": "Itália",
+    "albumPrincipal": "Simili",
+    "rating": "4.8"
+  },
+  {
+    "artista": "Eros Ramazzotti",
+    "genero": "Pop",
+    "origem": "Itália",
+    "albumPrincipal": "Eros",
+    "rating": "4.7"
+  },
+  {
+    "artista": "Mahmood",
+    "genero": "Pop",
+    "origem": "Itália",
+    "albumPrincipal": "Gadda",
+    "rating": "4.6"
+  },
+  {
+    "artista": "Giusy Ferreri",
+    "genero": "Pop",
+    "origem": "Itália",
+    "albumPrincipal": "Hits",
+    "rating": "4.5"
+  },
+  {
+    "artista": "Irama",
+    "genero": "Pop",
+    "origem": "Itália",
+    "albumPrincipal": "Crepe",
+    "rating": "4.6"
+  },
+  {
+    "artista": "Annalisa",
+    "genero": "Pop",
+    "origem": "Itália",
+    "albumPrincipal": "Nuda",
+    "rating": "4.7"
+  },
+  {
+    "artista": "Emma Marrone",
+    "genero": "Pop",
+    "origem": "Itália",
+    "albumPrincipal": "Schiena",
+    "rating": "4.6"
+  },
+  {
+    "artista": "Noemi",
+    "genero": "Pop",
+    "origem": "Itália",
+    "albumPrincipal": "Made in London",
+    "rating": "4.5"
+  },
+  {
+    "artista": "Charly García",
+    "genero": "Rock",
+    "origem": "Argentina",
+    "albumPrincipal": "Clics Modernos",
+    "rating": "4.8"
+  },
+  {
+    "artista": "Fito Páez",
+    "genero": "Rock",
+    "origem": "Argentina",
+    "albumPrincipal": "El Amor Después del Amor",
+    "rating": "4.9"
+  },
+  {
+    "artista": "Soda Stereo",
+    "genero": "Rock",
+    "origem": "Argentina",
+    "albumPrincipal": "Canción Animal",
+    "rating": "4.9"
+  },
+  {
+    "artista": "León Gieco",
+    "genero": "Folk Rock",
+    "origem": "Argentina",
+    "albumPrincipal": "De Usuaria a Usuario",
+    "rating": "4.7"
+  },
+  {
+    "artista": "Bizarrap",
+    "genero": "Trap",
+    "origem": "Argentina",
+    "albumPrincipal": "BZRP Music Sessions",
+    "rating": "4.8"
+  },
+  {
+    "artista": "Nicki Nicole",
+    "genero": "Trap",
+    "origem": "Argentina",
+    "albumPrincipal": "Parte de Mí",
+    "rating": "4.7"
+  },
+  {
+    "artista": "Duki",
+    "genero": "Trap",
+    "origem": "Argentina",
+    "albumPrincipal": "Desde el Fin del Mundo",
+    "rating": "4.6"
+  },
+  {
+    "artista": "Trueno",
+    "genero": "Trap",
+    "origem": "Argentina",
+    "albumPrincipal": "Bien o Mal",
+    "rating": "4.7"
+  },
+  {
+    "artista": "ABBA",
+    "genero": "Pop",
+    "origem": "Suécia",
+    "albumPrincipal": "Waterloo",
+    "rating": "4.9"
+  },
+  {
+    "artista": "Avicii",
+    "genero": "Eletrônica",
+    "origem": "Suécia",
+    "albumPrincipal": "True",
+    "rating": "4.7"
+  },
+  {
+    "artista": "Zara Larsson",
+    "genero": "Pop",
+    "origem": "Suécia",
+    "albumPrincipal": "So Good",
+    "rating": "4.6"
+  },
+  {
+    "artista": "Loreen",
+    "genero": "Pop",
+    "origem": "Suécia",
+    "albumPrincipal": "Heal",
+    "rating": "4.7"
+  },
+  {
+    "artista": "Swedish House Mafia",
+    "genero": "Eletrônica",
+    "origem": "Suécia",
+    "albumPrincipal": "Paradise",
+    "rating": "4.8"
+  },
+  {
+    "artista": "Tove Lo",
+    "genero": "Pop",
+    "origem": "Suécia",
+    "albumPrincipal": "Queen of the Clouds",
+    "rating": "4.6"
+  },
+  {
+    "artista": "First Aid Kit",
+    "genero": "Folk",
+    "origem": "Suécia",
+    "albumPrincipal": "Stay Gold",
+    "rating": "4.7"
+  },
+  {
+    "artista": "Kent",
+    "genero": "Rock",
+    "origem": "Suécia",
+    "albumPrincipal": "Hagnesta Hill",
+    "rating": "4.8"
+  },
+  {
+    "artista": "Roxette",
+    "genero": "Pop Rock",
+    "origem": "Suécia",
+    "albumPrincipal": "Look Sharp!",
+    "rating": "4.7"
+  },
+  {
+    "artista": "t.A.T.u.",
+    "genero": "Pop",
+    "origem": "Rússia",
+    "albumPrincipal": "200 km/h in the Wrong Lane",
+    "rating": "4.6"
+  },
+  {
+    "artista": "Zemfira",
+    "genero": "Rock",
+    "origem": "Rússia",
+    "albumPrincipal": "Zemfira",
+    "rating": "4.7"
+  },
+  {
+    "artista": "Alsou",
+    "genero": "Pop",
+    "origem": "Rússia",
+    "albumPrincipal": "Alsou",
+    "rating": "4.5"
+  },
+  {
+    "artista": "DDT",
+    "genero": "Rock",
+    "origem": "Rússia",
+    "albumPrincipal": "This Is Eighteen",
+    "rating": "4.8"
+  },
+  {
+    "artista": "Bi-2",
+    "genero": "Rock",
+    "origem": "Rússia",
+    "albumPrincipal": "Moloko",
+    "rating": "4.6"
+  },
+  {
+    "artista": "Splin",
+    "genero": "Rock",
+    "origem": "Rússia",
+    "albumPrincipal": "25-й кадр",
+    "rating": "4.7"
+  },
+  {
+    "artista": "Mumiy Troll",
+    "genero": "Rock",
+    "origem": "Rússia",
+    "albumPrincipal": "Iudif",
+    "rating": "4.6"
+  },
+  {
+    "artista": "Nyusha",
+    "genero": "Pop",
+    "origem": "Rússia",
+    "albumPrincipal": "Zakoldovano",
+    "rating": "4.5"
+  },
+  {
+    "artista": "Philip Kirkorov",
+    "genero": "Pop",
+    "origem": "Rússia",
+    "albumPrincipal": "Fialkovye Polya",
+    "rating": "4.4"
+  },
+  {
+    "artista": "Jay Chou",
+    "genero": "Mandopop",
+    "origem": "China",
+    "albumPrincipal": "Still Fantasy",
+    "rating": "4.8"
+  },
+  {
+    "artista": "Wang Leehom",
+    "genero": "Mandopop",
+    "origem": "China",
+    "albumPrincipal": "Heroes of Earth",
+    "rating": "4.7"
+  },
+  {
+    "artista": "G.E.M.",
+    "genero": "Cantopop",
+    "origem": "China",
+    "albumPrincipal": "Queen of Hearts",
+    "rating": "4.7"
+  },
+  {
+    "artista": "Lay Zhang",
+    "genero": "Mandopop",
+    "origem": "China",
+    "albumPrincipal": "Lay 2",
+    "rating": "4.6"
+  },
+  {
+    "artista": "Li Ronghao",
+    "genero": "Mandopop",
+    "origem": "China",
+    "albumPrincipal": "Old Log",
+    "rating": "4.7"
+  },
+  {
+    "artista": "Teresa Teng",
+    "genero": "Mandopop",
+    "origem": "China",
+    "albumPrincipal": "Teresa Teng's Greatest Hits",
+    "rating": "4.9"
+  },
+  {
+    "artista": "Faye Wong",
+    "genero": "Cantopop",
+    "origem": "China",
+    "albumPrincipal": "Coming Home",
+    "rating": "4.8"
+  },
+  {
+    "artista": "Lexie Liu",
+    "genero": "Hip-Hop",
+    "origem": "China",
+    "albumPrincipal": "Love",
+    "rating": "4.6"
+  },
+  {
+    "artista": "A-Lin",
+    "genero": "Mandopop",
+    "origem": "China",
+    "albumPrincipal": "Angel's Lover",
+    "rating": "4.7"
+  },
+  {
+    "artista": "Black Coffee",
+    "genero": "House",
+    "origem": "África do Sul",
+    "albumPrincipal": "Subconsciously",
+    "rating": "4.8"
+  },
+  {
+    "artista": "Miriam Makeba",
+    "genero": "Afro-Jazz",
+    "origem": "África do Sul",
+    "albumPrincipal": "Pata Pata",
+    "rating": "4.9"
+  },
+  {
+    "artista": "Ladysmith Black Mambazo",
+    "genero": "Mbube",
+    "origem": "África do Sul",
+    "albumPrincipal": "Shaka Zulu",
+    "rating": "4.8"
+  },
+  {
+    "artista": "Hugh Masekela",
+    "genero": "Afro-Jazz",
+    "origem": "África do Sul",
+    "albumPrincipal": "Grazing in the Grass",
+    "rating": "4.7"
+  },
+  {
+    "artista": "Lucky Dube",
+    "genero": "Reggae",
+    "origem": "África do Sul",
+    "albumPrincipal": "Slave",
+    "rating": "4.8"
+  },
+  {
+    "artista": "Die Antwoord",
+    "genero": "Hip-Hop",
+    "origem": "África do Sul",
+    "albumPrincipal": "$O$",
+    "rating": "4.6"
+  },
+  {
+    "artista": "Johnny Clegg",
+    "genero": "Afro-Pop",
+    "origem": "África do Sul",
+    "albumPrincipal": "Third World Child",
+    "rating": "4.7"
+  },
+  {
+    "artista": "Freshlyground",
+    "genero": "Afro-Pop",
+    "origem": "África do Sul",
+    "albumPrincipal": "Nomvula",
+    "rating": "4.6"
+  },
+  {
+    "artista": "Shakira",
+    "genero": "Pop",
+    "origem": "Colômbia",
+    "albumPrincipal": "Laundry Service",
+    "rating": "4.8"
+  },
+  {
+    "artista": "Juanes",
+    "genero": "Rock",
+    "origem": "Colômbia",
+    "albumPrincipal": "Mi Sangre",
+    "rating": "4.7"
+  },
+  {
+    "artista": "Carlos Vives",
+    "genero": "Vallenato",
+    "origem": "Colômbia",
+    "albumPrincipal": "Clásicos de la Provincia",
+    "rating": "4.8"
+  },
+  {
+    "artista": "Maluma",
+    "genero": "Reggaeton",
+    "origem": "Colômbia",
+    "albumPrincipal": "Papi Juancho",
+    "rating": "4.6"
+  },
+  {
+    "artista": "J Balvin",
+    "genero": "Reggaeton",
+    "origem": "Colômbia",
+    "albumPrincipal": "Colores",
+    "rating": "4.7"
+  },
+  {
+    "artista": "Karol G",
+    "genero": "Reggaeton",
+    "origem": "Colômbia",
+    "albumPrincipal": "Mañana Será Bonito",
+    "rating": "1.8"
+  },
+  {
+    "artista": "Sebastián Yatra",
+    "genero": "Pop",
+    "origem": "Colômbia",
+    "albumPrincipal": "Fantasía",
+    "rating": "4.6"
+  },
+  {
+    "artista": "Morat",
+    "genero": "Pop",
+    "origem": "Colômbia",
+    "albumPrincipal": "Más Balas Perdidas",
+    "rating": "4.7"
+  },
+  {
+    "artista": "JPEGMAFIA",
+    "genero": "Hardcore Hip-Hop",
+    "origem": "Estados Unidos",
+    "albumPrincipal": "Veteran",
+    "rating": "5.0"
   }
 ]
