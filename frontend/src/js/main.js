@@ -1,11 +1,32 @@
-import './tailwind-config.js';        
-import { artists, renderArtistCard } from './artists.js';
+import "./tailwind-config.js";
+import { allArtists } from "./data/artists.js";
+import { fetchAll } from "./api/artistsApi.js";
+import { renderGrid } from "./ui/render.js";
+import { openModal, closeModal, getFormData } from "./ui/modal.js";
+import { showToast } from "./ui/toast.js";
+import { handleCreate } from "./crud/create.js";
+import { handleUpdate } from "./crud/update.js";
+import { handleDelete } from "./crud/delete.js";
+import { applyFilters } from "./filters/filters.js";
 
-document.addEventListener('DOMContentLoaded', () => {
-  const app = document.getElementById('app');
+const $ = (selector) => document.querySelector(selector);
+const $$ = (selector) => document.querySelectorAll(selector);
 
-  
-  const html = `
+const on = (element, event, handler) => {
+  element?.addEventListener(event, handler);
+};
+
+const delegate = (parent, event, selector, handler) => {
+  parent?.addEventListener(event, (e) => {
+    if (e.target.matches(selector) || e.target.closest(selector)) {
+      handler(e);
+    }
+  });
+};
+
+document.addEventListener("DOMContentLoaded", async () => {
+  const app = document.getElementById("app");
+  app.innerHTML = `
     <div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
       <div class="layout-container flex h-full grow flex-col">
         <div class="px-4 md:px-10 lg:px-20 xl:px-40 flex flex-1 justify-center py-5">
@@ -129,6 +150,58 @@ document.addEventListener('DOMContentLoaded', () => {
               <h2 class="text-gray-900 dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Destaques</h2>
 
               <div id="artists-grid" class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-4 p-4"></div>
+
+              <div id="artist-modal" class="fixed inset-0 bg-black/50 hidden items-center justify-center z-50">
+                  <div class="bg-white dark:bg-gray-800 rounded-xl shadow-2xl p-6 w-full max-w-md mx-4 transform transition-all scale-95">
+                    <div class="flex justify-between items-center mb-6">
+                      <h3 id="modal-title" class="text-2xl font-bold text-gray-900 dark:text-white">Adicionar Artista</h3>
+                      <button id="close-modal" class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-white text-2xl">×</button>
+                    </div>
+
+                    <form id="artist-form">
+                      <input type="hidden" id="artist-id" value="">
+
+                      <div class="space-y-4">
+                        <div>
+                          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Artista</label>
+                          <input type="text" id="input-artista" required class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary outline-none" placeholder="Ex: Anitta">
+                        </div>
+
+                        <div>
+                          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Gênero</label>
+                          <input type="text" id="input-genero" required class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary outline-none" placeholder="Ex: Funk">
+                        </div>
+
+                        <div>
+                          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Origem</label>
+                          <input type="text" id="input-origem" required class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary outline-none" placeholder="Ex: Brasil">
+                        </div>
+
+                        <div>
+                          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Álbum Principal</label>
+                          <input type="text" id="input-album" class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary outline-none" placeholder="Ex: Bang">
+                        </div>
+
+                        <div>
+                          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Rating (0 a 5)</label>
+                          <input type="number" id="input-rating" step="0.1" min="0" max="5" value="4.5" class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary outline-none">
+                        </div>
+                      </div>
+
+                      <div class="flex gap-3 mt-6">
+                        <button type="submit" class="flex-1 bg-primary hover:bg-primary/90 text-white font-bold py-3 rounded-lg transition">Salvar</button>
+                        <button type="button" id="cancel-modal" class="flex-1 bg-gray-300 dark:bg-gray-600 hover:bg-gray-400 dark:hover:bg-gray-500 text-gray-800 dark:text-white font-bold py-3 rounded-lg transition">Cancelar</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+
+                <!-- Toast de feedback -->
+                <div id="toast" class="fixed bottom-5 left-1/2 -translate-x-1/2 px-6 py-3 rounded-lg text-white font-bold shadow-lg z-50 hidden transition-all"></div>
+
+                <!-- Botão flutuante para adicionar -->
+                <button id="add-artist-btn" class="fixed bottom-6 right-6 bg-primary hover:bg-primary/90 text-white rounded-full w-14 h-14 shadow-2xl flex items-center justify-center text-3xl font-bold transition transform hover:scale-110">+</button>
+
             </main>
 
             <!-- Footer -->
@@ -154,66 +227,71 @@ document.addEventListener('DOMContentLoaded', () => {
     </div>
   `;
 
-  app.innerHTML = html;
-
-  // -------------------------------------------------
-  // 1. Dark / Light toggle
-  // -------------------------------------------------
-  const htmlEl = document.documentElement;
-  const themeBtn = document.getElementById('theme-toggle');
-  const icon = themeBtn.querySelector('span');
-
-  const setTheme = (dark) => {
-    if (dark) {
-      htmlEl.classList.add('dark');
-      icon.textContent = 'light_mode';
-      localStorage.setItem('theme', 'dark');
-    } else {
-      htmlEl.classList.remove('dark');
-      icon.textContent = 'dark_mode';
-      localStorage.setItem('theme', 'light');
+  if (allArtists.length === 0) {
+    try {
+      const data = await fetchAll();
+      allArtists.push(...data);
+      renderGrid(allArtists);
+      console.log("Artistas carregados:", allArtists.length);
+    } catch (err) {
+      showToast("Erro ao conectar com o servidor", false);
+      $("#artists-grid").innerHTML =
+        '<p class="col-span-full text-center text-red-500 py-10">Erro ao carregar artistas</p>';
     }
-  };
+  }
 
-  // Detecta preferência salva ou do SO
-  const saved = localStorage.getItem('theme');
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  setTheme(saved === 'dark' || (!saved && prefersDark));
+  // ==================== Eventos principais ====================
+  on($("#add-artist-btn"), "click", () => openModal("create"));
+  on($("#close-modal"), "click", closeModal);
+  on($("#cancel-modal"), "click", closeModal);
 
-  themeBtn.addEventListener('click', () => setTheme(!htmlEl.classList.contains('dark')));
+  // ==================== Event Delegation (editar/excluir) ====================
+  delegate($("#artists-grid"), "click", ".edit-btn", (e) => {
+    const card = e.target.closest(".artist-card");
+    const id = parseInt(card.dataset.id);
+    const artist = allArtists.find((a) => a.id === id);
+    if (artist) openModal("edit", artist);
+  });
 
-  // -------------------------------------------------
-  // 2. Busca + Filtros + Ordenação
-  // -------------------------------------------------
-  const searchInput = document.getElementById('search-input');
-  const genreFilter = document.getElementById('genre-filter');
-  const ratingSlider = document.getElementById('rating-slider');
-  const sortBy = document.getElementById('sort-by');
-  const grid = document.getElementById('artists-grid');
+  delegate($("#artists-grid"), "click", ".delete-btn", (e) => {
+    const card = e.target.closest(".artist-card");
+    const id = parseInt(card.dataset.id);
+    const artist = allArtists.find((a) => a.id === id);
+    if (artist) handleDelete(id, artist.artista);
+  });
 
-  const render = () => {
-    const query = searchInput.value.toLowerCase().trim();
+  // ==================== Formulário (criar/editar) ====================
+  on($("#artist-form"), "submit", async (e) => {
+    e.preventDefault();
+    const formData = getFormData();
 
-    let list = artists.filter(a => {
-      const byName = a.artista.toLowerCase().includes(query);
-      const byGenre = genreFilter.value === 'Todos gêneros' || a.genero === genreFilter.value;
-      const byRating = a.rating >= Number(ratingSlider.value);
-      return byName && byGenre && byRating;
-    });
+    try {
+      if (formData.id) {
+        await handleUpdate(formData.id, formData);
+      } else {
+        await handleCreate(formData);
+      }
+      closeModal();
+      applyFilters(); // atualiza a lista com filtros ativos
+    } catch (err) {
+      showToast("Erro ao salvar artista", false);
+    }
+  });
 
-    // Ordenação
-    if (sortBy.value === 'Avaliação (Alta para Baixa)') list.sort((a, b) => b.rating - a.rating);
-    else if (sortBy.value === 'Avaliação (Baixa para Alta)') list.sort((a, b) => a.rating - b.rating);
+  // ==================== Filtros e busca ====================
+  const filterElements = [
+    "search-input",
+    "genre-filter",
+    "rating-slider",
+    "sort-by",
+  ];
+  filterElements.forEach((id) => {
+    const el = $(`#${id}`);
+    if (el) {
+      el.addEventListener("input", applyFilters);
+      el.addEventListener("change", applyFilters);
+    }
+  });
 
-    grid.innerHTML = list.length
-      ? list.map(renderArtistCard).join('')
-      : '<p class="col-span-full text-center text-gray-500 dark:text-gray-400 py-8">Nenhum artista encontrado.</p>';
-  };
-
-  searchInput.addEventListener('input', render);
-  genreFilter.addEventListener('change', render);
-  ratingSlider.addEventListener('input', render);
-  sortBy.addEventListener('change', render);
-
-  render(); // primeira renderização
+  applyFilters();
 });
