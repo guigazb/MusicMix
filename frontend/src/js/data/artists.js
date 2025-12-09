@@ -1,2 +1,5 @@
 export let allArtists = [];
-export let isLoading = false;
+
+export function setAllArtists(artists) {
+  allArtists = artists;
+}

@@ -1,0 +1,21 @@
+# MusicMix
+
+MusicMix é uma pequena aplicação full‑stack para explorar, adicionar, editar e excluir artistas. Frontend em Vite (Vanilla JS + Tailwind) e backend em Express + SQLite com seed inicial.
+
+## Recursos
+- Listagem, busca, filtros e ordenação de artistas
+- CRUD (criar, editar, excluir) via API REST
+- Seed inicial do banco SQLite a partir de `backend/src/data/artists.json`
+
+## Estrutura principal
+- frontend: interface (Vite)
+- backend: API (Express + SQLite)
+
+## Instalação e execução (desenvolvimento)
+
+1. Backend
+```sh
+cd backend
+npm install
+npm run dev
+```

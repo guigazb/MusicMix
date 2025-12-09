@@ -1,6 +1,6 @@
 import express from 'express';
 import cors from 'cors';
-import artistsRoutes from './routes/artistsRoutes.js';
+import artistsRoutes from './Routes/artistsRoutes.js'; // 'Routes' com maiúscula
 
 const app = express();
 const PORT = 3000;
