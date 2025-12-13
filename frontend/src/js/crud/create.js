@@ -8,7 +8,7 @@ export async function handleCreate(data) {
     const novo = await createArtist(data);
     const updated = [...allArtists, novo]; // Adiciona o novo artista
     setAllArtists(updated); // Atualiza a memória
-    //allArtists.push(novo);
+    allArtists.push(novo);
     showToast('Artista adicionado!');
     renderGrid();
   } catch (err) {

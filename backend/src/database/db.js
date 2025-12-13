@@ -32,7 +32,8 @@ async function initializeDatabase() {
         genero TEXT,
         origem TEXT,
         albumPrincipal TEXT,
-        rating REAL DEFAULT 0
+        rating REAL DEFAULT 0,
+        linkStreaming TEXT
       )
     `);
     console.log('Tabela "artists" garantida.');
@@ -65,8 +66,8 @@ async function seedIfEmpty() {
     await db.run('BEGIN TRANSACTION');
 
     const stmt = db.prepare(`
-      INSERT INTO artists (artista, genero, origem, albumPrincipal, rating)
-      VALUES (?, ?, ?, ?, ?)
+      INSERT INTO artists (artista, genero, origem, albumPrincipal, rating, linkStreaming)
+      VALUES (?, ?, ?, ?, ?, ?)
     `);
 
     for (const a of data) {
@@ -77,6 +78,7 @@ async function seedIfEmpty() {
           a.origem || null,
           a.albumPrincipal || null,
           parseFloat(a.rating) || 0,
+          a.linkStreaming || null,
           (err) => err ? reject(err) : resolve()
         );
       });

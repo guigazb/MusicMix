@@ -6,6 +6,7 @@ MusicMix é uma pequena aplicação full‑stack para explorar, adicionar, edita
 - Listagem, busca, filtros e ordenação de artistas
 - CRUD (criar, editar, excluir) via API REST
 - Seed inicial do banco SQLite a partir de `backend/src/data/artists.json`
+- Redirecionamento para o link de streaming correspondente
 
 ## Estrutura principal
 - frontend: interface (Vite)
@@ -14,6 +15,13 @@ MusicMix é uma pequena aplicação full‑stack para explorar, adicionar, edita
 ## Instalação e execução (desenvolvimento)
 
 1. Backend
+```sh
+cd backend
+npm install
+npm run dev
+```
+
+2. Backend
 ```sh
 cd backend
 npm install

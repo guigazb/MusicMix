@@ -1,14 +1,13 @@
 let currentEditId = null;
-let onSaveCallback = null;
 
-export function openModal(mode = 'create', artist = null, callback) {
+export function openModal(mode = 'create', artist = null) {
   const modal = document.getElementById('artist-modal');
   const title = document.getElementById('modal-title');
-  onSaveCallback = callback;
 
   if (mode === 'create') {
     title.textContent = 'Adicionar Artista';
     document.getElementById('artist-form').reset();
+    document.getElementById('input-streaming').value = '';
     currentEditId = null;
   } else {
     title.textContent = 'Editar Artista';
@@ -16,6 +15,7 @@ export function openModal(mode = 'create', artist = null, callback) {
     document.getElementById('input-genero').value = artist.genero;
     document.getElementById('input-origem').value = artist.origem;
     document.getElementById('input-album').value = artist.albumPrincipal || '';
+    document.getElementById('input-streaming').value = artist.linkStreaming || '';
     document.getElementById('input-rating').value = artist.rating;
     currentEditId = artist.id;
   }
@@ -27,7 +27,6 @@ export function openModal(mode = 'create', artist = null, callback) {
 export function closeModal() {
   document.getElementById('artist-modal').classList.add('hidden');
   document.getElementById('artist-modal').classList.remove('flex');
-  currentEditId = null;
 }
 
 export function getFormData() {
@@ -37,8 +36,7 @@ export function getFormData() {
     genero: document.getElementById('input-genero').value.trim(),
     origem: document.getElementById('input-origem').value.trim(),
     albumPrincipal: document.getElementById('input-album').value.trim() || null,
+    linkStreaming: document.getElementById('input-streaming').value.trim() || null,
     rating: parseFloat(document.getElementById('input-rating').value) || 0
   };
 }
-
-export { currentEditId };

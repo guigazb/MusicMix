@@ -10,24 +10,12 @@ import { handleDelete } from "./crud/delete.js";
 import { applyFilters } from "./filters/filters.js";
 
 const $ = (selector) => document.querySelector(selector);
-const $$ = (selector) => document.querySelectorAll(selector);
-
-const on = (element, event, handler) => {
-  element?.addEventListener(event, handler);
-};
-
-const delegate = (parent, event, selector, handler) => {
-  parent?.addEventListener(event, (e) => {
-    if (e.target.matches(selector) || e.target.closest(selector)) {
-      handler(e);
-    }
-  });
-};
 
 document.addEventListener("DOMContentLoaded", async () => {
   const app = document.getElementById("app");
+
   app.innerHTML = `
-    <div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+    <div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden bg-gray-50 dark:bg-gray-950">
       <div class="layout-container flex h-full grow flex-col">
         <div class="px-4 md:px-10 lg:px-20 xl:px-40 flex flex-1 justify-center py-5">
           <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
@@ -44,7 +32,6 @@ document.addEventListener("DOMContentLoaded", async () => {
               </div>
 
               <div class="flex items-center gap-4 flex-1 justify-end">
-                <!-- Busca -->
                 <label class="flex flex-col min-w-40 !h-10 max-w-64">
                   <div class="flex w-full flex-1 items-stretch rounded-lg h-full">
                     <div class="text-gray-500 dark:text-gray-400 flex border-none bg-black/5 dark:bg-white/10 items-center justify-center pl-4 rounded-l-lg">
@@ -56,7 +43,6 @@ document.addEventListener("DOMContentLoaded", async () => {
                   </div>
                 </label>
 
-                <!-- Botão Dark Mode -->
                 <button id="theme-toggle"
                         class="p-2 rounded-lg bg-black/5 dark:bg-white/10 hover:bg-black/10 dark:hover:bg-white/20 transition-colors">
                   <span class="material-symbols-outlined text-gray-700 dark:text-gray-300">dark_mode</span>
@@ -149,148 +135,102 @@ document.addEventListener("DOMContentLoaded", async () => {
 
               <h2 class="text-gray-900 dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Destaques</h2>
 
-              <div id="artists-grid" class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-4 p-4"></div>
+              <div id="artists-grid" class="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-8 p-4"></div>
 
+              <!-- Modal com campo de linkStreaming -->
               <div id="artist-modal" class="fixed inset-0 bg-black/50 hidden items-center justify-center z-50">
-                  <div class="bg-white dark:bg-gray-800 rounded-xl shadow-2xl p-6 w-full max-w-md mx-4 transform transition-all scale-95">
-                    <div class="flex justify-between items-center mb-6">
-                      <h3 id="modal-title" class="text-2xl font-bold text-gray-900 dark:text-white">Adicionar Artista</h3>
-                      <button id="close-modal" class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-white text-2xl">×</button>
-                    </div>
-
-                    <form id="artist-form">
-                      <input type="hidden" id="artist-id" value="">
-
-                      <div class="space-y-4">
-                        <div>
-                          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Artista</label>
-                          <input type="text" id="input-artista" required class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary outline-none" placeholder="Ex: Anitta">
-                        </div>
-
-                        <div>
-                          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Gênero</label>
-                          <input type="text" id="input-genero" required class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary outline-none" placeholder="Ex: Funk">
-                        </div>
-
-                        <div>
-                          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Origem</label>
-                          <input type="text" id="input-origem" required class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary outline-none" placeholder="Ex: Brasil">
-                        </div>
-
-                        <div>
-                          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Álbum Principal</label>
-                          <input type="text" id="input-album" class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary outline-none" placeholder="Ex: Bang">
-                        </div>
-
-                        <div>
-                          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Rating (0 a 5)</label>
-                          <input type="number" id="input-rating" step="0.1" min="0" max="5" value="4.5" class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary outline-none">
-                        </div>
-                      </div>
-
-                      <div class="flex gap-3 mt-6">
-                        <button type="submit" class="flex-1 bg-primary hover:bg-primary/90 text-white font-bold py-3 rounded-lg transition">Salvar</button>
-                        <button type="button" id="cancel-modal" class="flex-1 bg-gray-300 dark:bg-gray-600 hover:bg-gray-400 dark:hover:bg-gray-500 text-gray-800 dark:text-white font-bold py-3 rounded-lg transition">Cancelar</button>
-                      </div>
-                    </form>
+                <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl p-8 w-full max-w-lg mx-4">
+                  <div class="flex justify-between items-center mb-8">
+                    <h3 id="modal-title" class="text-3xl font-bold text-gray-900 dark:text-white">Adicionar Artista</h3>
+                    <button id="close-modal" class="text-4xl text-gray-500 hover:text-gray-700">&times;</button>
                   </div>
+                  <form id="artist-form" class="space-y-6">
+                    <input type="hidden" id="artist-id">
+                    <input type="text" id="input-artista" required placeholder="Nome do artista" class="w-full px-6 py-4 rounded-xl border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-900 focus:ring-2 focus:ring-indigo-500 outline-none text-lg"/>
+                    <input type="text" id="input-genero" required placeholder="Gênero" class="w-full px-6 py-4 rounded-xl border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-900 focus:ring-2 focus:ring-indigo-500 outline-none text-lg"/>
+                    <input type="text" id="input-origem" required placeholder="Origem (país)" class="w-full px-6 py-4 rounded-xl border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-900 focus:ring-2 focus:ring-indigo-500 outline-none text-lg"/>
+                    <input type="text" id="input-album" placeholder="Álbum principal (opcional)" class="w-full px-6 py-4 rounded-xl border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-900 focus:ring-2 focus:ring-indigo-500 outline-none text-lg"/>
+                    <input type="url" id="input-streaming" placeholder="Link do Spotify (opcional)" class="w-full px-6 py-4 rounded-xl border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-900 focus:ring-2 focus:ring-indigo-500 outline-none text-lg"/>
+                    <input type="number" id="input-rating" step="0.1" min="0" max="5" value="4.5" class="w-full px-6 py-4 rounded-xl border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-900 focus:ring-2 focus:ring-indigo-500 outline-none text-lg"/>
+                    <div class="flex gap-6 pt-6">
+                      <button type="submit" class="flex-1 bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-5 rounded-xl transition text-xl">Salvar</button>
+                      <button type="button" id="cancel-modal" class="flex-1 bg-gray-300 dark:bg-gray-700 hover:bg-gray-400 dark:hover:bg-gray-600 font-bold py-5 rounded-xl transition text-xl">Cancelar</button>
+                    </div>
+                  </form>
                 </div>
+              </div>
 
-                <!-- Toast de feedback -->
-                <div id="toast" class="fixed bottom-5 left-1/2 -translate-x-1/2 px-6 py-3 rounded-lg text-white font-bold shadow-lg z-50 hidden transition-all"></div>
+              <!-- Toast -->
+              <div id="toast" class="fixed bottom-5 left-1/2 -translate-x-1/2 px-8 py-4 rounded-2xl text-white font-bold shadow-2xl z-50 hidden transition-all"></div>
 
-                <!-- Botão flutuante para adicionar -->
-                <button id="add-artist-btn" class="fixed bottom-6 right-6 bg-primary hover:bg-primary/90 text-white rounded-full w-14 h-14 shadow-2xl flex items-center justify-center text-3xl font-bold transition transform hover:scale-110">+</button>
-
+              <!-- Botão + -->
+              <button id="add-artist-btn" class="fixed bottom-8 right-8 w-16 h-16 bg-indigo-600 hover:bg-indigo-700 text-white text-5xl font-bold rounded-full shadow-2xl flex items-center justify-center transition transform hover:scale-110">+</button>
             </main>
 
             <!-- Footer -->
-            <footer class="flex flex-col gap-6 px-5 py-10 text-center @container border-t border-solid border-black/10 dark:border-white/10 mt-10">
-              <div class="flex flex-wrap items-center justify-center gap-6 @[480px]:flex-row @[480px]:justify-around">
-                <a href="#" class="text-gray-600 dark:text-gray-400 text-base font-normal leading-normal min-w-40 hover:text-primary transition-colors">Sobre Nós</a>
-                <a href="#" class="text-gray-600 dark:text-gray-400 text-base font-normal leading-normal min-w-40 hover:text-primary transition-colors">Contato</a>
-                <a href="#" class="text-gray-600 dark:text-gray-400 text-base font-normal leading-normal min-w-40 hover:text-primary transition-colors">Termos de Serviço</a>
-              </div>
-              <div class="flex flex-wrap justify-center gap-4">
-                <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-primary transition-colors"><span class="material-symbols-outlined">alternate_email</span></a>
-                <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-primary transition-colors"><span class="material-symbols-outlined">photo_camera</span></a>
-                <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-primary transition-colors"><span class="material-symbols-outlined">group</span></a>
-              </div>
-              <p class="text-gray-600 dark:text-gray-400 text-base font-normal leading-normal">
+            <footer class="flex flex-col gap-6 px-5 py-10 text-center border-t border-solid border-black/10 dark:border-white/10 mt-10">
+              <p class="text-gray-600 dark:text-gray-400 text-base">
                 © 2025 MusicMix. All rights reserved. By Guilherme Barrio & Beneilton Martins.
               </p>
             </footer>
-
           </div>
         </div>
       </div>
     </div>
   `;
 
+  // Carregar artistas
   if (allArtists.length === 0) {
     try {
       const data = await fetchAll();
       allArtists.push(...data);
-      renderGrid(allArtists);
-      console.log("Artistas carregados:", allArtists.length);
+      renderGrid();
     } catch (err) {
       showToast("Erro ao conectar com o servidor", false);
-      $("#artists-grid").innerHTML =
-        '<p class="col-span-full text-center text-red-500 py-10">Erro ao carregar artistas</p>';
     }
   }
 
-  // ==================== Eventos principais ====================
-  on($("#add-artist-btn"), "click", () => openModal("create"));
-  on($("#close-modal"), "click", closeModal);
-  on($("#cancel-modal"), "click", closeModal);
+  // Eventos
+  $("#add-artist-btn").addEventListener("click", () => openModal("create"));
+  $("#close-modal").addEventListener("click", closeModal);
+  $("#cancel-modal").addEventListener("click", closeModal);
 
-  // ==================== Event Delegation (editar/excluir) ====================
-  delegate($("#artists-grid"), "click", ".edit-btn", (e) => {
+  // Event delegation para botões dinâmicos
+  $("#artists-grid").addEventListener("click", (e) => {
     const card = e.target.closest(".artist-card");
+    if (!card) return;
     const id = parseInt(card.dataset.id);
-    const artist = allArtists.find((a) => a.id === id);
-    if (artist) openModal("edit", artist);
+    const artist = allArtists.find(a => a.id === id);
+
+    if (e.target.classList.contains("edit-btn")) {
+      openModal("edit", artist);
+    }
+    if (e.target.classList.contains("delete-btn")) {
+      handleDelete(id, artist.artista);
+    }
   });
 
-  delegate($("#artists-grid"), "click", ".delete-btn", (e) => {
-    const card = e.target.closest(".artist-card");
-    const id = parseInt(card.dataset.id);
-    const artist = allArtists.find((a) => a.id === id);
-    if (artist) handleDelete(id, artist.artista);
-  });
-
-  // ==================== Formulário (criar/editar) ====================
-  on($("#artist-form"), "submit", async (e) => {
+  // Formulário
+  $("#artist-form").addEventListener("submit", async (e) => {
     e.preventDefault();
-    const formData = getFormData();
-
+    const data = getFormData();
     try {
-      if (formData.id) {
-        await handleUpdate(formData.id, formData);
+      if (data.id) {
+        await handleUpdate(data.id, data);
       } else {
-        await handleCreate(formData);
+        await handleCreate(data);
       }
       closeModal();
-      applyFilters(); // atualiza a lista com filtros ativos
+      applyFilters();
     } catch (err) {
       showToast("Erro ao salvar artista", false);
     }
   });
 
-  // ==================== Filtros e busca ====================
-  const filterElements = [
-    "search-input",
-    "genre-filter",
-    "rating-slider",
-    "sort-by",
-  ];
-  filterElements.forEach((id) => {
-    const el = $(`#${id}`);
-    if (el) {
-      el.addEventListener("input", applyFilters);
-      el.addEventListener("change", applyFilters);
-    }
+  // Filtros
+  ["search-input", "genre-filter", "rating-slider", "sort-by"].forEach(id => {
+    $(`#${id}`)?.addEventListener("input", applyFilters);
+    $(`#${id}`)?.addEventListener("change", applyFilters);
   });
 
   applyFilters();

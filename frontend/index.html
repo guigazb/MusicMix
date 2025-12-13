@@ -1,22 +1,208 @@
 <!DOCTYPE html>
 <html class="dark" lang="pt-BR">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MusicMix - Descubra seus artistas</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MusicMix - Descubra seus artistas</title>
 
-  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;900&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <style>
+      :root {
+        --primary: #6366f1;
+        --bg: #0f172a;
+        --card: #1e293b;
+        --text: #e2e8f0;
+        --text-muted: #94a3b8;
+        --border: #334155;
+        --accent: #f59e0b;
+      }
+      .light {
+        --bg: #f8fafc;
+        --card: white;
+        --text: #1e293b;
+        --text-muted: #64748b;
+        --border: #e2e8f0;
+      }
+      body {
+        margin: 0;
+        font-family: system-ui, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        min-height: 100vh;
+      }
+      .container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.5rem 0;
+        border-bottom: 1px solid var(--border);
+      }
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: var(--primary);
+      }
+      .search-bar {
+        display: flex;
+        width: 400px;
+        border: 2px solid var(--border);
+        border-radius: 12px;
+        overflow: hidden;
+      }
+      .search-bar input {
+        flex: 1;
+        padding: 1rem;
+        border: none;
+        background: transparent;
+        color: var(--text);
+        outline: none;
+      }
+      .search-bar span {
+        padding: 0 1rem;
+        background: var(--card);
+        display: flex;
+        align-items: center;
+        color: #94a3b8;
+      }
+      #artists-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+      }
+      .artist-card {
+        background: var(--card);
+        border-radius: 20px;
+        padding: 1.8rem;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s;
+      }
+      .artist-card:hover {
+        transform: translateY(-12px);
+        box-shadow: 0 20px 50px rgba(99, 102, 241, 0.3);
+      }
+      .artist-name {
+        font-size: 1.6rem;
+        font-weight: bold;
+        color: var(--primary);
+        text-decoration: none;
+      }
+      .artist-name:hover {
+        text-decoration: underline;
+      }
+      .artist-info {
+        color: var(--text-muted);
+        margin: 0.5rem 0;
+        font-size: 1rem;
+      }
+      .album {
+        color: var(--text-muted);
+        font-size: 0.9rem;
+        margin-top: 0.5rem;
+      }
+      .rating {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: var(--accent);
+        font-weight: bold;
+        font-size: 1.4rem;
+        margin: 1rem 0;
+      }
+      .actions {
+        display: flex;
+        gap: 1rem;
+        margin-top: 1.5rem;
+      }
+      .btn {
+        flex: 1;
+        padding: 1rem;
+        border: none;
+        border-radius: 12px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+      .btn-edit {
+        background: #3b82f6;
+        color: white;
+      }
+      .btn-edit:hover {
+        background: #2563eb;
+      }
+      .btn-delete {
+        background: #ef4444;
+        color: white;
+      }
+      .btn-delete:hover {
+        background: #dc2626;
+      }
+      #add-btn {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 70px;
+        height: 70px;
+        background: var(--primary);
+        color: white;
+        border: none;
+        border-radius: 50%;
+        font-size: 2.5rem;
+        box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4);
+        cursor: pointer;
+      }
+      #add-btn:hover {
+        transform: scale(1.1);
+      } 
+      @keyframes toastIn {
+        from {
+          opacity: 0;
+          transform: translateX(-50%) translateY(100px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(-50%) translateY(0);
+        }
+      }
+      @keyframes toastOut {
+        from {
+          opacity: 1;
+          transform: translateX(-50%) translateY(0);
+        }
+        to {
+          opacity: 0;
+          transform: translateX(-50%) translateY(100px);
+        }
+      }
+    </style>
 
-  <link rel="stylesheet" href="/src/css/styles.css">
-</head>
-<body class="min-h-screen bg-background-light dark:bg-background-dark font-display">
-  <div id="app"></div>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
 
-  <script type="module" src="/src/js/main.js"></script>
-</body>
+    <link rel="stylesheet" href="/src/css/styles.css" />
+  </head>
+  <body
+    class="min-h-screen bg-background-light dark:bg-background-dark font-display"
+  >
+    <div id="app"></div>
+
+    <script type="module" src="/src/js/main.js"></script>
+  </body>
 </html>

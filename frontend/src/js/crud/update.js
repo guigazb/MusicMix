@@ -7,11 +7,12 @@ export async function handleUpdate(id, data) {
   try {
     const updated = await updateArtist(id, data);
     const index = allArtists.findIndex(a => a.id === id);
+
     // Cria uma nova array com o artista atualizado
     const newArtists = [...allArtists];
     newArtists[index] = updated;
     setAllArtists(newArtists);
-    //allArtists[index] = updated;
+    allArtists[index] = updated;
     showToast('Artista atualizado!');
     renderGrid();
   } catch (err) {

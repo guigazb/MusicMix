@@ -19,14 +19,15 @@ export const getArtistById = async (id) => {
 
 export const insertArtist = async (artista) => {
   const result = await db.run(
-    `INSERT INTO artists (artista, genero, origem, albumPrincipal, rating)
-     VALUES (?, ?, ?, ?, ?)`,
+    `INSERT INTO artists (artista, genero, origem, albumPrincipal, rating, linkStreaming)
+     VALUES (?, ?, ?, ?, ?, ?)`,
     [
       artista.artista,
       artista.genero,
       artista.origem,
-      artista.albumPrincipal,
-      artista.rating || 0
+      artista.albumPrincipal || null,
+      artista.rating || 0,
+      artista.linkStreaming || null
     ]
   );
   return { id: result.lastID, ...artista };
@@ -34,17 +35,21 @@ export const insertArtist = async (artista) => {
 
 export const updateArtist = async (id, artista) => {
   await db.run(
-    `UPDATE artists SET artista = ?, genero = ?, origem = ?, albumPrincipal = ?, rating = ? WHERE id = ?`,
+    `UPDATE artists SET 
+      artista = ?, genero = ?, origem = ?, 
+      albumPrincipal = ?, rating = ?, linkStreaming = ? 
+     WHERE id = ?`,
     [
       artista.artista,
       artista.genero,
       artista.origem,
-      artista.albumPrincipal,
+      artista.albumPrincipal || null,
       artista.rating || 0,
+      artista.linkStreaming || null,
       id
     ]
   );
-  return getById(id);
+  return getArtistById(id);
 };
 
 export const deleteArtist = async (id) => {
