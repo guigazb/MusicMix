@@ -1,3 +1,4 @@
+Feito por: Guilherme Barrio & Beneilton Martins 
 # MusicMix
 
 MusicMix é uma pequena aplicação full‑stack para explorar, adicionar, editar e excluir artistas. Frontend em Vite (Vanilla JS + Tailwind) e backend em Express + SQLite com seed inicial.
